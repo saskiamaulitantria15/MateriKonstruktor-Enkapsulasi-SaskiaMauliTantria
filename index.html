@@ -233,7 +233,9 @@ Lihat DartPad
 
 <div class="card">
 <h2>2. Constant Constructor</h2>
-<p>Penggunaan const constructor.</p>
+<p>-Digunakan untuk objek yang immutable (tidak berubah).</p>
+<p>-Menghemat memory untuk objek yang sama.</p>
+<p>-Semua field harus final.</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/6dc0cf4f7fd35562c6f4aca941cf774d')">
@@ -243,7 +245,9 @@ Lihat DartPad
 
 <div class="card">
 <h2>3. Initializer List</h2>
-<p>Initializer list pada constructor.</p>
+<p>-Menginisialisasi field sebelum constructor body dieksekusi.</p>
+<p>-Berguna untuk inisialisasi final field atau validasi.</p>
+<p>-Resirecting Contructor.</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/837e1fce4d0b993f80b8bb8d089da10a')">
@@ -252,8 +256,9 @@ Lihat DartPad
 </div>
 
 <div class="card">
-<h2>4. Private Variable</h2>
-<p>Contoh variabel private.</p>
+<h2>4. Public vs Private Variable</h2>
+<p>-Public: Dapat diakses dari mana saja (default).</p>
+<p>-Private: Hanya dapat diakses dalam file yang sama (gunakan_).</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/d9c97ece619deaeef771d610531c5ea6')">
@@ -262,8 +267,10 @@ Lihat DartPad
 </div>
 
 <div class="card">
-<h2>5. Getter</h2>
-<p>Mengambil nilai variabel private.</p>
+<h2>5. Getter - Mengakses Data Private</h2>
+<p>-Getter memungkinkan membaca data private dengan kontrol.</p>
+<p>-Sintaks 1: tipeData get namaGetter _field;</p>
+<p>-Sintaks 2: tipeData namaGetter () { _field }</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/0b5f4aaf06602b287d958245a8aedf2f')">
@@ -272,8 +279,10 @@ Lihat DartPad
 </div>
 
 <div class="card">
-<h2>6. Setter</h2>
-<p>Mengubah nilai variabel.</p>
+<h2>6. Setter - Memodifikasi Data Private</h2>
+<p>-Setter memungkinkan modifikasi data dengan validasi.</p>
+<p>-Sintaks 1: set namaSetter (value).</p>
+<p>-Sintaks 2: void NamaSetter (value).</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/28a1cf704a6f537d5062eb5f8ea56e64')">
@@ -292,8 +301,8 @@ Lihat DartPad
 </div>
 
 <div class="card">
-<h2>8. Encapsulation Login</h2>
-<p>Contoh encapsulation pada user.</p>
+<h2>8. Studi Kasus: Sistem Login Sederhana</h2>
+<p>Contoh.</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/691ce8a541642a09ac4deedf487c0a5b')">
