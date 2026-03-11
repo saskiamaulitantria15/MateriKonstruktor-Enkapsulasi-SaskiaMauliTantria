@@ -221,8 +221,8 @@ height:400px;
 <h2>Pengertian Konstruktor & Enkapsulasi</h2>
 
 <ul>
-<li><b>Konstruktor</b>: metode khusus yang otomatis dipanggil saat objek dibuat.</li>
-<li><b>Enkapsulasi</b>: membungkus data dan method menjadi satu serta menyembunyikan data.</li>
+<li><b>Konstruktor</b>: merupakan metode khusus dalam sebuah class yang dipanggil secara otomatis saat objek dibuat. Konstruktor digunakan untuk menginisialisasi nilai awal dari atribut objek, sehingga objek dapat langsung digunakan setelah dibuat.</li>
+<li><b>Enkapsulasi</b>: merupakan konsep dalam Object Oriented Programming (OOP) yang digunakan untuk membungkus data (atribut) dan method dalam satu class serta membatasi akses langsung terhadap data tersebut. Dengan enkapsulasi, data dapat dilindungi dari perubahan yang tidak diinginkan dan hanya dapat diakses melalui getter dan setter.</li>
 </ul>
 
 </div>
@@ -232,11 +232,11 @@ height:400px;
 <h2>Jenis Constructor di Dart</h2>
 
 <ul>
-<li><b>Default Constructor</b></li>
-<li><b>Named Constructor</b></li>
-<li><b>Parameterized Constructor</b></li>
-<li><b>Constant Constructor</b></li>
-<li><b>Factory Constructor</b></li>
+<li><b>Default Constructor:</b> Constructor bawaan yang otomatis dibuat oleh Dart jika class tidak memiliki constructor sendiri.</li>
+<li><b>Named Constructor:</b> Constructor yang memiliki nama tambahan sehingga satu class dapat memiliki beberapa constructor dengan fungsi berbeda.</li>
+<li><b>Parameterized Constructor:</b> Constructor yang menerima parameter sehingga nilai atribut dapat diisi saat objek dibuat.</li>
+<li><b>Constant Constructor:</b> Constructor yang digunakan untuk membuat objek immutable (tidak dapat berubah setelah dibuat).</li>
+<li><b>Factory Constructor:</b> Constructor khusus yang digunakan untuk mengontrol proses pembuatan objek, misalnya mengembalikan objek yang sudah ada atau membuat objek baru berdasarkan kondisi tertentu.</li>
 </ul>
 
 </div>
@@ -263,6 +263,9 @@ Lihat DartPad
 
 <div class="card">
 <h2>3. Initializer List</h2>
+
+<p>Initializer List adalah mekanisme dalam Dart yang digunakan untuk menginisialisasi field sebelum body constructor dijalankan. Fitur ini biasanya digunakan untuk menginisialisasi variabel final atau melakukan validasi data sebelum objek dibuat.
+Initializer list ditulis menggunakan tanda ":" setelah constructor.</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/837e1fce4d0b993f80b8bb8d089da10a?run=true')">
