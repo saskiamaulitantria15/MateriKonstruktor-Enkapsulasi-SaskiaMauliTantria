@@ -199,6 +199,27 @@ height:400px;
 
 }
 
+/* CODE VIEWER */
+
+.code-box{
+background:#000;
+color:#00ff88;
+padding:18px;
+border-radius:12px;
+font-family:monospace;
+font-size:13px;
+overflow-x:auto;
+margin:15px 0;
+border:1px solid #333;
+line-height:1.5;
+}
+
+.code-title{
+font-size:12px;
+font-weight:bold;
+margin-bottom:8px;
+color:#666;
+}
 </style>
 
 </head>
@@ -240,42 +261,116 @@ height:400px;
 </ul>
 
 </div>
-
+  
 <div class="card">
+
 <h2>1. Named Constructor</h2>
 
-<p>Dalam satu class, kita bisa membuat lebih dari satu constructor dengan fungsi yang berbeda menggunakan named constructor.</p>
+<p>
+Named constructor memungkinkan sebuah class memiliki lebih dari satu constructor
+dengan nama berbeda sehingga objek dapat dibuat dengan cara yang berbeda.
+</p>
+
+<div class="code-title">DART SOURCE CODE</div>
+
+<div class="code-box">
+<pre>
+class Mahasiswa {
+  String nama;
+  int umur;
+
+  Mahasiswa(this.nama, this.umur);
+
+  Mahasiswa.baru(this.nama){
+    umur = 18;
+  }
+}
+
+void main(){
+  var m1 = Mahasiswa("Saskia",19);
+  var m2 = Mahasiswa.baru("Ariq");
+
+  print(m1.nama);
+  print(m2.umur);
+}
+</pre>
+</div>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/713c6f39bb886a8c639a4fa88d818310?run=true')">
-Lihat DartPad
+Run Program
 </button>
 
 </div>
-
 <div class="card">
+
 <h2>2. Constant Constructor</h2>
 
-<p>Constructor ini ditandai dengan kata kunci const.
-Semua variabel dalam class yang menggunakan constant constructor harus bertipe final.</p>
+<p>
+Constant constructor digunakan untuk membuat objek yang bersifat immutable
+atau tidak dapat diubah setelah dibuat. Constructor ini menggunakan keyword
+<b>const</b> dan semua field dalam class harus bertipe <b>final</b>.
+</p>
+
+<div class="code-title">DART SOURCE CODE</div>
+
+<div class="code-box">
+<pre>
+class Produk {
+  final String nama;
+
+  const Produk(this.nama);
+}
+
+void main(){
+  const p1 = Produk("Laptop");
+  const p2 = Produk("Laptop");
+
+  print(p1.nama);
+}
+</pre>
+</div>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/6dc0cf4f7fd35562c6f4aca941cf774d?run=true')">
-Lihat DartPad
+Run Program
 </button>
 
 </div>
-
 <div class="card">
+
 <h2>3. Initializer List</h2>
 
-<p>Initializer List adalah mekanisme dalam Dart yang digunakan untuk menginisialisasi field sebelum body constructor dijalankan. Fitur ini biasanya digunakan untuk menginisialisasi variabel final atau melakukan validasi data sebelum objek dibuat.</p>
+<p>
+Initializer List digunakan untuk menginisialisasi variabel sebelum
+body constructor dijalankan. Fitur ini sering digunakan untuk
+menginisialisasi variabel final atau melakukan validasi data.
+</p>
 
-<p>Initializer list ditulis menggunakan tanda ":" setelah constructor.</p>
+<div class="code-title">DART SOURCE CODE</div>
+
+<div class="code-box">
+<pre>
+class Produk {
+  final String nama;
+  final double harga;
+
+  Produk(String namaInput, double hargaInput)
+      : nama = namaInput,
+        harga = hargaInput;
+
+}
+
+void main(){
+  var p = Produk("Laptop",5000000);
+  print(p.nama);
+}
+</pre>
+</div>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/837e1fce4d0b993f80b8bb8d089da10a?run=true')">
-Lihat DartPad
+Run Program
 </button>
 
 </div>
