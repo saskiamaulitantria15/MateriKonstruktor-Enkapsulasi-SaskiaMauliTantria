@@ -277,6 +277,12 @@ Lihat DartPad
 <div class="card">
 <h2>4. Public vs Private Variable</h2>
 
+<p>Dalam Dart, semua variabel secara default bersifat public, sehingga dapat diakses dari luar class.
+Untuk membuat variabel menjadi private, digunakan tanda underscore (_) di depan nama variabel. Variabel private hanya dapat diakses dalam file yang sama.
+Contoh:
+nama → public
+_nama → private</p>
+
 <button class="btn"
 onclick="openPad('https://dartpad.dev/d9c97ece619deaeef771d610531c5ea6?run=true')">
 Lihat DartPad
@@ -286,6 +292,8 @@ Lihat DartPad
 
 <div class="card">
 <h2>5. Getter</h2>
+
+<p>Getter adalah method yang digunakan untuk mengambil atau membaca nilai dari variabel private. Dengan getter, programmer tetap dapat mengakses data tanpa membuka akses langsung ke variabel tersebut.</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/0b5f4aaf06602b287d958245a8aedf2f?run=true')">
@@ -297,6 +305,8 @@ Lihat DartPad
 <div class="card">
 <h2>6. Setter</h2>
 
+<p>Setter adalah method yang digunakan untuk mengubah nilai dari variabel private dengan aturan tertentu. Biasanya setter digunakan untuk melakukan validasi data sebelum nilai disimpan.</p>
+
 <button class="btn"
 onclick="openPad('https://dartpad.dev/28a1cf704a6f537d5062eb5f8ea56e64?run=true')">
 Lihat DartPad
@@ -307,6 +317,9 @@ Lihat DartPad
 <div class="card">
 <h2>7. Getter & Setter Validasi</h2>
 
+<p>Getter dan setter juga dapat digunakan untuk menambahkan validasi terhadap data. Misalnya memastikan nilai tidak negatif atau tidak kosong sebelum disimpan dalam atribut class.
+Dengan cara ini, data yang tersimpan di dalam objek akan tetap valid dan aman.</p>
+
 <button class="btn"
 onclick="openPad('https://dartpad.dev/1193fc901aeb4b3df0a47870385dc3bc?run=true')">
 Lihat DartPad
@@ -316,6 +329,9 @@ Lihat DartPad
 
 <div class="card">
 <h2>8. Studi Kasus Login</h2>
+
+<p>Contoh sistem login sederhana menunjukkan bagaimana enkapsulasi melindungi data username dan password agar tidak bisa diubah secara sembarangan dari luar class.
+Proses login biasanya dilakukan melalui method tertentu yang akan memeriksa apakah username dan password yang dimasukkan sesuai dengan data yang tersimpan.</p>
 
 <button class="btn"
 onclick="openPad('https://dartpad.dev/691ce8a541642a09ac4deedf487c0a5b?run=true')">
@@ -329,9 +345,8 @@ Lihat DartPad
 <h2>Kesimpulan</h2>
 
 <p>
-Konstruktor digunakan untuk inisialisasi objek saat dibuat, 
-sedangkan enkapsulasi digunakan untuk melindungi data dengan 
-membatasi akses langsung ke variabel.
+Konstruktor dan enkapsulasi merupakan dua konsep penting dalam Object Oriented Programming. Konstruktor digunakan untuk memastikan objek dibuat dengan nilai awal yang benar, sedangkan enkapsulasi digunakan untuk melindungi data dan mengontrol akses terhadap atribut dalam class.
+Dengan menerapkan kedua konsep ini, program menjadi lebih terstruktur, aman, dan mudah untuk dikembangkan.
 </p>
 
 </div>
